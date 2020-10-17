@@ -1,0 +1,24 @@
+{
+  "name": "BokyTimeScriptTypesforStrings",
+  "version": "0.1.0",
+  "description": "parse time string (parseTime) & convert Date to time string (timeToString)",
+  "main": "dist/time.js",
+  "typings": "dist/time",
+  "scripts": {
+    "test": "ts-node tests.ts",
+    "build": "tsc --declaration && npm run minify",
+    "minify": "uglifyjs -cm --source-map \"content='dist/time.js.map'\" -o dist/time.min.js -- dist/time.js",
+    "prepare": "npm run build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^10.3.6",
+    "ts-node": "^7.0.0",
+    "typescript": "^2.9.2",
+    "uglify-js": "^3.4.2"
+  },
+  "files": [
+    "time.ts",
+    "dist/time.*"
+  ]
+}
